@@ -20,18 +20,30 @@ function App() {
     }
   };
 
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleSubmit();
+    }
+  };
+
+  const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    handleSubmit();
+  };
+
   return (
     <div className="max-w-xl my-20 mx-auto items-center min-h-screen">
-      <form className="flex flex-col gap-4">
+      <form className="flex flex-col gap-4" onSubmit={handleSubmitForm}>
         <h1 className='text-2xl text-stone-800 font-bold'>CEK KHODAM ONLINE</h1>
         <input
           ref={contentRef}
+          onKeyPress={handleKeyPress}
           id="content"
           className="p-2 border border-stone-800 rounded"
           type="text"
           placeholder="Masukan Nama Kamu"
         />
-        <button type="button" onClick={handleSubmit} className="p-2 bg-stone-800 rounded text-white">
+        <button type="submit" className="p-2 bg-stone-800 rounded text-white">
           {loading ? 'Memeriksa...' : 'Cek Sekarang'}
         </button>
       </form>
