@@ -14,7 +14,7 @@ export const request = async (name: string) => {
                 content: `Saya ingin mengetahui nama khodam dari seseorang bernama ${name}. Tolong berikan jawabannya dalam bahasa Indonesia dan hanya berikan nama khodamnya dan arti khodamnya tanpa informasi lainnya. Contoh: "Nama khodam dari ${name} adalah ... dan arti dari khodam tersebut adalah ...".`
             },
         ],
-        model: "llama3-8b-8192"
+        model: "llama3-70b-8192"
     })
     return reply.choices[0].message.content
 }
