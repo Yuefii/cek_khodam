@@ -14,7 +14,7 @@ function App() {
         setData(ai);
       } catch (error) {
         console.error('Error fetching data:', error);
-        setData('Terjadi kesalahan saat memeriksa khodam.');
+        setData('Maaf server AI nya sedang mati');
       }
       setLoading(false);
     }
