@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className="max-w-xl my-20 mx-auto items-center min-h-screen">
+    <div className="max-w-xl my-20 mx-5 md:mx-auto items-center min-h-screen">
       <form className="flex flex-col gap-4" onSubmit={handleSubmitForm}>
         <h1 className='text-2xl text-stone-800 font-bold'>CEK KHODAM ONLINE</h1>
         <input
